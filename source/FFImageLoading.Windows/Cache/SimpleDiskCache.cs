@@ -172,7 +172,7 @@ namespace FFImageLoading.Cache
         /// <param name="key">Key.</param>
         /// <param name="bytes">Bytes.</param>
         /// <param name="duration">Duration.</param>
-        public virtual async Task AddToSavingQueueIfNotExistsAsync(string key, byte[] bytes, TimeSpan duration, Action writeFinished = null)
+        public virtual async Task AddToSavingQueueIfNotExistsAsync(string key, byte[] bytes, TimeSpan duration, string uri = null, Action<FileWriteInfo> writeFinished = null)
         {
             await initTask.ConfigureAwait(false);
 
@@ -204,7 +204,7 @@ namespace FFImageLoading.Cache
                         }
 
                         entries[key] = new CacheEntry(DateTime.UtcNow, duration, filename);
-                        writeFinished?.Invoke();
+                        writeFinished?.Invoke(new FileWriteInfo(file.Path, uri));
                     }
                     catch (Exception ex) // Since we don't observe the task (it's not awaited, we should catch all exceptions)
                     {
