@@ -25,8 +25,8 @@
     <ItemGroup>
         <ProjectReference Include="..\..\..\source\FFImageLoading.Common\FFImageLoading.csproj" />
         <ProjectReference Include="..\..\..\source\FFImageLoading.Forms\FFImageLoading.Forms.csproj" />
-        <ProjectReference Include="..\..\..\source\FFImageLoading.Forms.Mock\FFImageLoading.Forms.Mock.csproj" />
-        <ProjectReference Include="..\..\..\source\FFImageLoading.Mock\FFImageLoading.Mock.csproj" />
+        <ProjectReference Include="..\..\..\source\FFImageLoading.Forms.Mock\FFImageLoading.Forms.Mock.csproj" PrivateAssets="All" />
+        <ProjectReference Include="..\..\..\source\FFImageLoading.Mock\FFImageLoading.Mock.csproj" PrivateAssets="All" />
         <ProjectReference Include="..\..\..\source\FFImageLoading.Svg\FFImageLoading.Svg.csproj" />
         <ProjectReference Include="..\..\..\source\FFImageLoading.Svg.Forms\FFImageLoading.Svg.Forms.csproj" />
         <ProjectReference Include="..\..\..\source\FFImageLoading.Transformations\FFImageLoading.Transformations.csproj" />
